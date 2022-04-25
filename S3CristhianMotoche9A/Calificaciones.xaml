@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="S3CristhianMotoche9A.Calificaciones">
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Sistema de Calificaciones" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Label Text="Primer Parcial" FontSize="Title" Padding="30,10,30,10"/>
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*">
+                    </RowDefinition>
+                    <RowDefinition Height="*">
+                    </RowDefinition>
+                    <RowDefinition Height="*">
+                    </RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*">
+                    </ColumnDefinition>
+                    <ColumnDefinition Width="*">
+                    </ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="LblNotaS1" Text="Nota de Seguimiento" Grid.Row="0" Grid.Column="0"></Label>
+                <Entry x:Name="TxtNotaS1" Placeholder="0.00" Keyboard="Numeric" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="End" TextChanged="EvaluarRango_TextChanged" Unfocused="CalcularPrimerParcial_Unfocused"></Entry>
+                <Label x:Name="LblNotaE1" Text="Nota de Exámen" Grid.Row="1" Grid.Column="0"></Label>
+                <Entry x:Name="TxtNotaE1" Placeholder="0.00" Keyboard="Numeric" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="End" TextChanged="EvaluarRango_TextChanged" Unfocused="CalcularPrimerParcial_Unfocused"></Entry>
+                <Label x:Name="LblNotaP1" Text="Nota Parcial" Grid.Row="2" Grid.Column="0" FontSize="20"></Label>
+                <Entry x:Name="TxtNotaP1" Keyboard="Numeric" Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="End" IsReadOnly="True" ></Entry>
+
+            </Grid>
+
+            <Label Text="Segundo Parcial" FontSize="Title" Padding="30,10,30,10"/>
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*">
+                    </RowDefinition>
+                    <RowDefinition Height="*">
+                    </RowDefinition>
+                    <RowDefinition Height="*">
+                    </RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*">
+                    </ColumnDefinition>
+                    <ColumnDefinition Width="*">
+                    </ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="LblNotaS2" Text="Nota de Seguimiento" Grid.Row="0" Grid.Column="0"></Label>
+                <Entry x:Name="TxtNotaS2" Placeholder="0.00" Keyboard="Numeric" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="End" TextChanged="EvaluarRango_TextChanged" Unfocused="CalcularSegundoParcial_Focused"></Entry>
+                <Label x:Name="LblNotaE2" Text="Nota deExámen" Grid.Row="1" Grid.Column="0"></Label>
+                <Entry x:Name="TxtNotaE2" Placeholder="0.00" Keyboard="Numeric" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="End" TextChanged="EvaluarRango_TextChanged" Unfocused="CalcularSegundoParcial_Focused"></Entry>
+                <Label x:Name="LblNotaP2" Text="Nota Parcial" Grid.Row="2" Grid.Column="0" FontSize="20"></Label>
+                <Entry x:Name="TxtNotaP2" Keyboard="Numeric" Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="End" IsReadOnly="True"></Entry>
+
+            </Grid>
+            <BoxView Color="#2196F3" ></BoxView>
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*">
+                    </RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*">
+                    </ColumnDefinition>
+                    <ColumnDefinition Width="*">
+                    </ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="LblNotaFinal" Text="Nota Final" Grid.Row="0" Grid.Column="0" FontSize="Title"></Label>
+                <Entry x:Name="TxtNotaFinal" Keyboard="Numeric" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="End" IsReadOnly="True" FontSize="Title"></Entry>
+
+
+            </Grid>
+
+            <Button x:Name="BtnCalcular" Text="Calcular" FontSize="Title" Clicked="BtnCalcular_Clicked"></Button>
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
